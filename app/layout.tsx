@@ -1,0 +1,3 @@
+import type { Metadata } from "next"; import "./globals.css"; import { profile } from "@/data/profile";
+export const metadata: Metadata = {title:`${profile.name} | ${profile.role}`,description:"Full-stack engineer focused on backend systems and applied AI.",metadataBase:new URL("https://adrishkarak.dev")};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en" suppressHydrationWarning><body><script dangerouslySetInnerHTML={{__html:"try{if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light')}catch(e){}"}}/>{children}</body></html>}
